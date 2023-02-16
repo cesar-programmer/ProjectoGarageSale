@@ -1,0 +1,95 @@
+.error-container {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #0c0a0a;
+  font-family: sans-serif;
+}
+
+.error {
+  font-size: 10em;
+  margin-bottom: 0.1em;
+  text-shadow: 0 0 0.5em #fff;
+}
+
+.lorem {
+  font-size: 2em;
+  text-shadow: 0 0 0.5em #fff;
+}
+
+.astronaut-container {
+  position: relative;
+  margin: 1em auto 0;
+  width: 150px;
+  height: 150px;
+}
+
+.astronaut-body {
+  position: absolute;
+  top: 60px;
+  left: 25px;
+  width: 100px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 50px 50px 20px 20px;
+  animation: astronaut-body 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes astronaut-body {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(40deg);
+  }
+}
+
+.astronaut-helmet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150px;
+  height: 150px;
+  background-color: #fff;
+  border-radius: 75px;
+  overflow: hidden;
+}
+
+.astronaut-glass {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  border: 3px solid #000;
+  animation: astronaut-glass 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes astronaut-glass {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(10deg);
+  }
+}
+
+.astronaut-backpack {
+  position: absolute;
+  top: 50px;
+  left: 45px;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: astronaut-backpack 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes astronaut-backpack {
+  0% {
+    transform: rotate(-20deg);
+  }
+}
