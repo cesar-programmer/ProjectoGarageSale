@@ -1,6 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import '../styles/OrderItem.scss';
-import image from '../../public/assets/img/icons/icon_close.png';
+import '@styles/OrderItem.scss';
+import image from '@icons/icon_close.png';
 
 function OrderItem() {
   return (

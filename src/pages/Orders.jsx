@@ -1,6 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
 import OrderItem from '../components/OrderItem';
-import '../styles/Orders.scss';
+import '@styles/Orders.scss';
 
 function Orders() {
   return (

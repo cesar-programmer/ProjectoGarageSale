@@ -1,5 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import '../styles/Menu.scss';
+import '@styles/Menu.scss';
 
 function Menu() {
   return (

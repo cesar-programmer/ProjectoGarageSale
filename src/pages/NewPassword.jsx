@@ -1,13 +1,12 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import '../styles/NewPassword.scss';
-import logo from '../../public/assets/img/logos/logo_yard_sale.svg';
+import '@styles/NewPassword.scss';
 
 function NewPassword() {
   return (
     <div className="NewPassword">
       <div className="NewPassword-container">
-        <img src={logo} alt="logo" className="Login-Logo" />
         <h1 className="title">Create a new password</h1>
         <p className="subtitle">Enter a new passwrd for yue account</p>
         <form action="/" className="form">

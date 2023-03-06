@@ -1,12 +1,12 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import '../styles/SendEmail.scss';
-import image from '../../public/assets/img/logos/logo_yard_sale.svg';
+import '@styles/SendEmail.scss';
+import emailImage from '@icons/email.svg';
 
 function RecoveryPasword() {
   return (
     <div className="SendEmail">
       <div className="form-container">
-        <img src={image} alt="logo" className="Login-Logo" />
         <h1 className="title">
           Email has been sent!
         </h1>
@@ -14,7 +14,7 @@ function RecoveryPasword() {
           Plase check your inbox for instructions on how to reset the password
         </p>
         <div className="email-image">
-          <img src="./assets/img/icons/email.svg" alt="email" />
+          <img src={emailImage} alt="email" />
         </div>
         <button className="primary-button login-button" type="submit">Login</button>
         <p className="resend">

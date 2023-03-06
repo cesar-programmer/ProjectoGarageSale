@@ -1,5 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import ProductList from '../containers/ProductList';
+import ProductList from '@containers/ProductList';
 
 function Home() {
   return (

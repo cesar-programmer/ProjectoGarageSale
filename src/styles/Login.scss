@@ -14,7 +14,7 @@
 
 .Login-Logo{
   width: 150px;
-  margin-bottom: 48px;
+  margin-bottom: 8px;
   justify-self: center;
   display: none;
 }
@@ -74,9 +74,6 @@
   margin-bottom: 30px;
 }
 @media(max-width: 640px) {
-  .Login-Logo{
-    display: block;
-  }
   .secondary-buttom{
     width: 300px;
     position: absolute;

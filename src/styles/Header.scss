@@ -6,10 +6,8 @@ nav{
   padding: 0 24px;
   border-bottom: 1px solid var(--very-light-pink);
 }
-.menu{
-  display: none;
-}
-.logo{
+
+.logo-header{
   width: 100px;
 }
 .navbar-left ul,.navbar-right ul{
@@ -41,6 +39,10 @@ nav{
   color: var(--very-light-pink);
   font-size: var(--sm);
   margin-right: 12px;
+  cursor: pointer;
+}
+.navbar-email:hover{
+  color: var(--hospital-green);
 }
 .navbar-shopping-cart{
   position: relative;
@@ -60,8 +62,13 @@ nav{
   align-items: center;
 }
 
+.menu-icon{
+  cursor: pointer;
+  display: none;
+}
+
 @media (max-width: 640px) {
-  .menu{
+  .menu-icon{
     display: block;
   }
   .navbar-left ul{
@@ -69,5 +76,8 @@ nav{
   }
   .navbar-email{
     display: none;
+  }
+  .logo-header{
+    display: block;
   }
 }

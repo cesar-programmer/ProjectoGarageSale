@@ -1,6 +1,7 @@
+/* eslint-disable import/no-unresolved */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import '../styles/CreateAccount.scss';
+import '@styles/CreateAccount.scss';
 
 function CreateAccount() {
   return (

@@ -1,5 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import '../styles/Order.scss';
+import '@styles/Order.scss';
 
 function Order() {
   return (

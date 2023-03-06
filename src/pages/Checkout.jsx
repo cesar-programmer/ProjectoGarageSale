@@ -1,7 +1,8 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import OrderItem from '../components/OrderItem';
+import OrderItem from '@components/OrderItem';
 import Menu from '../components/Menu';
-import '../styles/Checkout.scss';
+import '@styles/Checkout.scss';
 
 function Checkout() {
   return (

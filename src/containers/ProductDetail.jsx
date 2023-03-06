@@ -1,6 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import ProductInfo from '../components/ProductInfo';
-import '../styles/ProductDetail.scss';
+import ProductInfo from '@components/ProductInfo';
+import '@styles/ProductDetail.scss';
 
 function ProductDetail() {
   return (

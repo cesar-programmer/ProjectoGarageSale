@@ -1,5 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import React from 'react';
-import '../styles/NotFound.scss';
+import '@styles/NotFound.scss';
 
 function NotFound() {
   return (
