@@ -1,24 +1,36 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable import/no-unresolved */
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import '@styles/Header.scss';
 import Menu from '@components/Menu';
 import MobileMenu from '@components/MobileMenu';
+import MyOrder from '@containers/MyOrder';
+import AppContext from '@context/AppContext';
 import iconMenu from '@icons/icon_menu.svg';
 import logoHeader from '@logos/logo_yard_sale.svg';
 import carIcon from '@icons/icon_shopping_cart.svg';
 
 function Header() {
   const [toggle, setToggle] = useState(false);
+  const [toggleOrders, setToggleOrders] = useState(false);
   const [toggleMenu, setToggleMobile] = useState(false);
+  const { state } = useContext(AppContext); // aqui se esta llamando al contexto
 
   const handleToggleMobile = () => {
     setToggleMobile(!toggleMenu);
+    setToggleOrders(false);
   };
 
   const handleToggle = () => {
     setToggle(!toggle);
+    setToggleOrders(false);
+  };
+
+  const handleToggleOrders = () => {
+    setToggleOrders(!toggleOrders);
+    setToggle(false);
+    setToggleMobile(false);
   };
 
   return (
@@ -52,14 +64,21 @@ function Header() {
           <li className="navbar-email" onClick={handleToggle}>
             example@gmail.com
           </li>
-          <li className="navbar-shopping-cart">
+          <li
+            className="navbar-shopping-cart"
+            onClick={handleToggleOrders}
+          >
             <img src={carIcon} alt="shopping-cart" />
-            <div>2</div>
+            {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
+            {/* aqui se esta llamando al contexto */}
           </li>
         </ul>
       </div>
-      {toggle && <Menu />}
+      {toggle ? <Menu /> : false}
+      {/* aqui con el if ternario pregunto directamnete si es falso o verdadero */}
+      {/* aqui se puede realizar la prefunta tanto como con if ternario o conun and  */}
       {toggleMenu && <MobileMenu />}
+      {toggleOrders && <MyOrder />}
     </nav>
   );
 }

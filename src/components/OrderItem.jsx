@@ -1,16 +1,20 @@
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable react/jsx-one-expression-per-line */
+/* eslint-disable react/prop-types */
 /* eslint-disable import/no-unresolved */
 import React from 'react';
 import '@styles/OrderItem.scss';
 import image from '@icons/icon_close.png';
 
-function OrderItem() {
+function OrderItem({ product }) {
   return (
     <div className="OrderItem">
       <figure>
-        <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="bike" />
+        <img src={product.images[0]} alt={product.title} />
       </figure>
-      <p>Bike</p>
-      <p>$30,00</p>
+      <p>{product.title}</p>
+      <p>{product.price}</p>
       <img src={image} alt="close" />
     </div>
   );
