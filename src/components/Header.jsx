@@ -7,31 +7,36 @@ import Menu from '@components/Menu';
 import MobileMenu from '@components/MobileMenu';
 import MyOrder from '@containers/MyOrder';
 import AppContext from '@context/AppContext';
+
 import iconMenu from '@icons/icon_menu.svg';
 import logoHeader from '@logos/logo_yard_sale.svg';
 import carIcon from '@icons/icon_shopping_cart.svg';
 
 function Header() {
   const [toggle, setToggle] = useState(false);
-  const [toggleOrders, setToggleOrders] = useState(false);
   const [toggleMenu, setToggleMobile] = useState(false);
+  // const [toggleOrders, setToggleOrders] = useState(false);
   const { state } = useContext(AppContext); // aqui se esta llamando al contexto
+  const { setToggleOrders } = useContext(AppContext); // aqui se esta llamando al contexto
 
   const handleToggleMobile = () => {
     setToggleMobile(!toggleMenu);
-    setToggleOrders(false);
+  };
+
+  const handleToggleOrders = () => {
+    setToggleOrders();
+    setToggle(false);
   };
 
   const handleToggle = () => {
     setToggle(!toggle);
-    setToggleOrders(false);
   };
 
-  const handleToggleOrders = () => {
-    setToggleOrders(!toggleOrders);
-    setToggle(false);
-    setToggleMobile(false);
-  };
+  // const handleToggleOrders = () => {
+  //   // setToggleOrders(!toggleOrders);
+  //   setToggle(false);
+  //   setToggleMobile(false);
+  // };
 
   return (
     <nav>
@@ -66,7 +71,7 @@ function Header() {
           </li>
           <li
             className="navbar-shopping-cart"
-            onClick={handleToggleOrders}
+            onClick={() => handleToggleOrders()}
           >
             <img src={carIcon} alt="shopping-cart" />
             {state.cart.length > 0 ? <div>{state.cart.length}</div> : null}
@@ -78,7 +83,8 @@ function Header() {
       {/* aqui con el if ternario pregunto directamnete si es falso o verdadero */}
       {/* aqui se puede realizar la prefunta tanto como con if ternario o conun and  */}
       {toggleMenu && <MobileMenu />}
-      {toggleOrders && <MyOrder />}
+      {state.toggleOrders && <MyOrder />}
+
     </nav>
   );
 }
