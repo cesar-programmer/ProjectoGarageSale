@@ -1,16 +1,18 @@
+/* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable import/no-unresolved */
 /* eslint-disable react/button-has-type */
 /* eslint-disable max-len */
 import React from 'react';
 import '@styles/ProductInfo.scss';
+import close from '@icons/icon_close.png';
 
 function ProductInfo() {
   return (
-    <div>
+    <div className="product-detail-secundary">
       <div className="product-detail-close-secundary">
-        <img src="./assets/img/icons/icon_close.png" alt="close" className="close" />
+        <img src={close} alt="close" className="close" />
       </div>
-      <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" />
+      <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" className="imageItem" />
       <div className="product-info-secundary">
         <p>$50.00</p>
         <p>bike</p>

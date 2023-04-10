@@ -1,11 +1,10 @@
-/* eslint-disable import/no-unresolved */
 import React from 'react';
 import ProductList from '@containers/ProductList';
 
 function Home() {
-  return (
-    <ProductList />
-  );
+	return (
+		<ProductList />
+	);
 }
 
 export default Home;
